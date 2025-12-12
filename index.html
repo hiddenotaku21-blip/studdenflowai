@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudenFlow - CS Study Sensei</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              anime: ['Fredoka', 'sans-serif'],
+              body: ['Nunito', 'sans-serif'],
+            },
+            colors: {
+              'anime-dark': '#1a1b2e',
+              'anime-card': '#24283b',
+              'anime-pink': '#ff79c6',
+              'anime-cyan': '#7aa2f7',
+              'anime-purple': '#bb9af7',
+              'anime-accent': '#9ece6a',
+            },
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #1a1b2e;
+        color: #c0caf5;
+        font-family: 'Nunito', sans-serif;
+        background-image: 
+          radial-gradient(circle at 10% 20%, rgba(187, 154, 247, 0.1) 0%, transparent 20%),
+          radial-gradient(circle at 90% 80%, rgba(122, 162, 247, 0.1) 0%, transparent 20%);
+      }
+      .anime-border {
+        position: relative;
+        border: 2px solid #7aa2f7;
+        box-shadow: 4px 4px 0px #bb9af7;
+        transition: all 0.2s ease;
+      }
+      .anime-border:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 6px 6px 0px #ff79c6;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1a1b2e; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #414868; 
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ff79c6; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "jspdf": "https://esm.sh/jspdf@^3.0.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.560.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "react": "https://esm.sh/react@^19.2.1",
+    "react-markdown": "https://esm.sh/react-markdown@^10.1.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="./index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="./index.tsx"></script>
+</body>
+</html>
